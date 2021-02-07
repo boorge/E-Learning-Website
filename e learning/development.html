@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Devlopment</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="shortcut icon" type="img/ico" href="img/favicon.ico">
+	<style type="text/css">
+		/*CSS for nav bar*/
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  color: rgb(80,87,99);
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
+
+.navDiv {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+#udemyNav {
+  height: 80px;
+}
+
+#category {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+#squareTile {
+  height: 13px;
+  margin-right: 10px;
+}
+
+#search {
+  background-color: rgb(242,243,245);
+  width:72%;
+  justify-content: space-between;
+  padding: 0 5px;
+  height: 30px;
+  border-radius: 3px;
+  margin: 0 10px;
+}
+
+.searchField {
+  border-width: 0px;
+  background-color: transparent;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  width: 100%;
+}
+
+#searchIcon {
+  height: 10px;
+}
+
+#navRight {
+  flex-direction: row-reverse;
+}
+
+#cart {
+  height: 27px;
+  order: 2;
+}
+
+#logIn {
+  height: 30px;
+  background-color: transparent;
+  border-stle: solid;
+  border-color: rgb(104, 111, 122);
+  border-width: 1px;
+  border-radius: 2px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  order: 1;
+  margin: 0 5px 0 5px;
+  width: 70px;
+  color: rgb(80,80,80);
+}
+
+#logIn:hover {
+  color: rgb(10,10,10);
+  border-color: black;
+}
+
+#signUp {
+  height: 30px;
+  background-color: rgb(236, 82, 82);
+  border-stle: solid;
+  border-color: transparent;
+  border-width: 1px;
+  border-radius: 2px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  width: 70px;
+}
+
+#signUp:hover {
+  background-color: rgb(150, 0, 0);
+}
+
+.navSmall {
+  display: none;
+}
+
+#hamburger {
+  height: 20px;
+  margin-right: 15px;
+}
+
+#navCenter {
+  justify-content: center;
+}
+
+.clickable:hover {
+  cursor: pointer;
+}
+
+/*CSS for banner*/
+#banner {
+  background: url(https://tedconfblog.files.wordpress.com/2013/01/blog_learn_to_code_art_rev.jpg?w=900&h=599);
+  background-size: cover;
+  height: 280px;
+}
+
+#bannerOverlay {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: #111;
+  padding: 0 20px;
+}
+
+.bannerText {
+  color: white;
+  font-weight: 100;
+  width: 300px;
+  text-shadow: 1px 2px rgb(0,0,0,.2);
+}
+
+#bannerTitle {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+#bannerBody {
+  margin: 15px 0;
+}
+
+#bannerSearch {
+  background-color: white;
+  width: 300px;
+  display: flex;
+  border-radius: 3px;
+  align-items: center;
+  padding: 0 5px;
+  height: 44px;
+  margin-bottom: 40px;
+}
+
+#bannerSearchIcon {
+  height: 18px;
+}
+
+/*Card*/
+.card {
+  margin-top: 20px;
+  padding: 0 20px;
+}
+
+#cardTitle {
+  font-size: 24px;
+}
+
+#cardLayout {
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cardContent {
+  display: flex;
+  align-items: center;
+  border-style: solid;
+  border-color: rgb(200,200,200);
+  border-width: 1px;
+  border-radius: 1px;
+  height: 62px;
+  padding: 0 15px;
+  transition: 0.5s;
+  width: 27%;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.cardContent:hover {
+  cursor: pointer;
+  box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.03);
+  background: #d82343;
+}
+
+.cardIcon {
+  height: 32px;
+  margin-right: 15px;
+}
+
+#cardDev {
+  margin-right: 3%;
+  margin-bottom: 10px;
+}
+
+#cardBus {
+  margin-right: 3%;
+}
+
+#cardDes {
+  margin-right: 3%;
+  margin-bottom: 10px;
+}
+
+#cardMar {
+  margin-right: 3%;
+}
+
+#cardPho {
+  margin-right: 3%;
+}
+
+/*Footer*/
+#footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(247,248,250);
+  margin-top: 20px;
+  padding: 0 20px 0 0;
+}
+
+.footDiv {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+#footCop {
+  font-size: 10px;
+  color: rgb(104,111,122);
+}
+
+.footText {
+  font-size: 10px;
+  color: rgb(0,119,145);
+  text-decoration: none;
+}
+
+.footText:hover {
+  color: rgb(0,50,61);
+}
+
+#footTerm {
+  margin-right: 10px;
+}
+
+/*CSS for responsive*/
+@media (max-width: 825px) {
+  .cardContent {
+    width: 42%;
+  }
+  
+  #cardBus {
+    margin-right: 0;
+  }
+  
+  #cardIT {
+    margin-right: 3%;
+  }
+  
+  #cardDes {
+    margin-right: 0;
+  }
+  
+  #cardMar {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 650px) {
+  .navBig {
+    display: none;
+  }
+  
+  .navSmall {
+    display: flex;
+  }
+  
+  #searchIcon {
+    height: 20px;
+  }
+  
+  #cart {
+    height: 35px;
+  }
+  
+  .navDiv {
+    width: 33.33333333%;
+  }
+  
+  #bannerTitle {
+    font-size: 30px;
+  }
+  
+  #bannerBody {
+    font-size: 13px;
+  }
+  
+  .bannerText {
+    width: 210px;
+  }
+}
+
+@media(max-width: 570px) {
+  .cardContent {
+    width: 100%;
+  }
+  
+  #cardDev {
+    margin-right: 0;
+  }
+  
+  #cardBus {
+    margin-bottom: 10px;
+  }
+  
+  #cardIT {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  
+  #cardMar {
+    margin-right: 0;
+  }
+  
+  #cardPho {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+}
+
+@media(max-width: 375px) {
+  #bannerSearch {
+    width: 100%;
+  }
+}
+
+@media(max-width: 250px) {
+  .bannerText {
+    width: 100%;
+  }
+.navDiv a{
+	text-decoration: none;
+	color: #111;
+	font-size: 10px;
+	font-weight: bold;	
+}
+
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 10%;
+  border-radius: 50%;
+  box-shadow: 0px 10px 10px 2px;
+  transition: 4.0s;
+}
+img.avatar:hover{
+	transform: rotate(361deg);
+	box-shadow: 0px 10px 10px 2px #d32843;
+}
+.container {
+  padding: 16px;
+}
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 28%;
+  height: 60vh; /* Could be more or less, depending on screen size */
+  border-radius: 20px;
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+	</style>
+</head>
+<body>
+<!-- Nav bar -->
+<div class="nav" id="navBig">
+<!-- Navigation bar elements when screen size is big -->
+  <div class="navDiv navBig">
+    <a href="home.html" class="logo"><span style=" font-family: Brush Script MT; font-size: 3em; color: #d82343;" >E</span><span style="font-weight: bold; color: #111; text-decoration: none;">-Learning</span><span style="font-size: 2em; color: #d82343;">.</span></a>
+  </div>
+  <a href="home.html"><li style="font-size: 30px; color: #111; text-decoration: none; list-style: none;" class="active" id="card"><i class="fa fa-home"></i></li></a>
+  <div class="navBig navDiv" id="search">
+    <input class="searchField" type="text" placeholder="Search for anything">
+    <img class="clickable" id="searchIcon" src="https://image.flaticon.com/icons/png/512/55/55369.png" alt="search">
+  </div>
+  <div class="navDiv navBig" id="navRight">
+    <button class="clickable" id="logIn">Log In</button>
+    <button class="clickable" id="signUp">Sign Up</button>
+  </div>
+
+<!-- Navigation bar elements when screen size is small -->
+  <div class="navDiv navSmall">
+    <img class="clickable" id="hamburger" src="https://cdn2.iconfinder.com/data/icons/clean-minimal-set/16/open-menu-01-512.png" alt="hamburger">
+    <img class="clickable" id="searchIcon" src="https://image.flaticon.com/icons/png/512/55/55369.png" alt="search">
+  </div>
+  <div class="navDiv navSmall" id="navCenter">
+    <a href="https://www.udemy.com/" target="_blank"><img id="udemyNav" src="https://www.udemy.com/staticx/udemy/images/v6/default-meta-image.png" alt="Udemy"></a>
+  </div>
+  <div class="navDiv navSmall" id="navRight">
+    <img class="clickable" id="cart" src="https://cdn0.iconfinder.com/data/icons/shopping-cart-26/1000/Shopping-Basket-03-512.png" alt="cart">
+  </div>
+</div>
+
+<!-- Banner -->
+<div id="banner">
+  <div id="bannerOverlay">
+    <div class="bannerText" id="bannerTitle">Learn on your schedule</div>
+    <div class="bannerText" id="bannerBody">Study any topic, anytime. Explore many of courses free.</div>
+    <div id="bannerSearch">
+      <input class="searchField" type="text" placeholder="What do you want to learn?">
+      <img class="clickable" id="bannerSearchIcon" src="https://image.flaticon.com/icons/png/512/55/55369.png" alt="search">
+    </div>
+  </div>
+</div>
+
+<!-- Card -->
+<div id="card">
+  <div id="cardTitle">Top Categories</div>
+  <div id="cardLayout">
+    <div class="cardContent" id="cardDev">
+      <a href="https://www.udemy.com/courses/development/"><img class="cardIcon" src="http://icons.iconarchive.com/icons/iconsmind/outline/256/Code-Window-icon.png" alt="Code icon"></a>
+      <div>Development</div>
+    </div>
+	<div class="cardContent" id="cardBus">
+        <a href="https://www.udemy.com/courses/development/"><img class="cardIcon" src="https://cdn4.iconfinder.com/data/icons/data-charts-and-graphs/100/Histogram-512.png" alt="Code icon"></a>
+      <div>Business</div>
+    </div>
+    <div class="cardContent" id="cardIT">
+      <a href="https://www.udemy.com/courses/development/"><img class="cardIcon" src="https://cdn4.iconfinder.com/data/icons/48-bubbles/48/29.Mac-512.png" alt="Code icon"></a>
+      <div>IT and Software</div>
+    </div>
+    <div class="cardContent" id="cardDes">
+      <a href="https://www.udemy.com/courses/development/"><img class="cardIcon" src="https://cdn1.iconfinder.com/data/icons/office-supplies-desk-accessories/54/office-pencil-holder-2-512.png" alt="Code icon"></a>
+      <div>Design</div>
+    </div>
+    <div class="cardContent" id="cardMar">
+      <a href="https://www.udemy.com/courses/development/"><img class="cardIcon" src="https://cdn1.iconfinder.com/data/icons/business-seo-vol-2/512/Target_Success_Bullseye_Goal_Archery_Arrow-512.png" alt="Code icon"></a>
+      <div>Marketing</div>
+    </div>
+    <div class="cardContent" id="cardPer">
+      <a href="https://www.udemy.com/courses/development/"><img class="cardIcon" src="https://cdn4.iconfinder.com/data/icons/basic-17/80/22_BO_open_book-512.png" alt="Code icon"></a>
+      <div>Personal Development</div>
+    </div>
+    <div class="cardContent" id="cardPho">
+      <a href="https://www.udemy.com/courses/development/"><img class="cardIcon" src="https://cdn4.iconfinder.com/data/icons/social-media-2-7/66/97-512.png" alt="Code icon"></a>
+      <div>Photography</div>
+    </div>
+    <div class="cardContent" id="cardMus">
+      <a href="https://www.udemy.com/courses/development/"><img class="cardIcon" src="https://cdn3.iconfinder.com/data/icons/music-and-audio-1/26/music-audio-1027-512.png" alt="Code icon"></a>
+      <div>Music</div></a>
+    </div>
+  </div>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+<!-- Footer -->
+<div id="footer">
+  <div class="footDiv">
+    <a href="#" class="logo"><span style=" font-family: Brush Script MT; font-size: 3em; color: #d82343;" >E</span><span style="font-weight: bold;color: #111;">- Learning</span><span style="font-size: 2em; color: #d82343;">.</span></a>
+    <div id="footCop">Copyright © 2020 <i class="fa fa-heart-o" aria-hidden="true"> <span style="color: #d82343; font-weight: bold;"> Borge-Tech</span></i></div>
+  </div>
+  <div class="footDiv">
+    <a class="footText" id="footTerm" href="https://www.udemy.com/terms/" target="_blank">Terms</a>
+    <a class="footText" href="privacy.html" target="_blank">Privacy Policy and Cookie Policy</a>
+  </div>
+</div>
+</body>
+</html>
